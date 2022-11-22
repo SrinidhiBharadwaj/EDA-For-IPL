@@ -3,4 +3,4 @@ matplotlib
 seaborn
 jupyter
 requests
-BeautifulSoup
+beautifulsoup4

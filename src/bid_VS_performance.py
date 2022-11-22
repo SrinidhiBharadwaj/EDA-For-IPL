@@ -89,7 +89,7 @@ def plot_correlation():
     plt.ylabel('W/L Ratio')
     plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
     plt.title("W/L Ratio in relation with Money Spent in Auction")
-    plt.savefig('../graph/win_loss ratio vs Speding.png')
+    plt.savefig('../graphs/win_loss ratio vs Speding.png')
 
     # plot average of the total spending during auction  vs the win/loss ratio per year
     plt.plot(allTeamBidYear, allTeamWLRatioAvg, 'o')  # spending to win/ratio
@@ -101,4 +101,4 @@ def plot_correlation():
     plt.ylabel('W/L Ratio')
     plt.title(
         "Average W/L Ratio in relation with Money Spent in Auction for All Teams")
-    plt.savefig('../graph/win_loss ratio vs speding average.png')
+    plt.savefig('../graphs/win_loss ratio vs speding average.png')

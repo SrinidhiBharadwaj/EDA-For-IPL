@@ -30,7 +30,8 @@ class Innings(object):
         Return:
         Tuple of bowler name and runs conceived by that bowler
         '''
-        assert isinstance(inning_deets, pd.DataFrame) and isinstance(over, int) and 1<=over<=20
+        assert isinstance(inning_deets, pd.DataFrame)
+
         over_deets = inning_deets.loc[inning_deets["over"] == over]
         bowler_name = np.unique(over_deets["bowler"])
 
@@ -49,6 +50,7 @@ class Innings(object):
 
         bowler_dict = defaultdict(list) #List of bowlers per innings
         inning_deets = self.match_deets.loc[self.data["inning"] == innings]
+
         overs = np.unique(inning_deets["over"])
         for over in overs:
             bowler, runs = self.get_over_info(inning_deets, over)
