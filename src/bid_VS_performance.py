@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 import seaborn as sns
 
 
-def plot_():
+def plot_correlation():
     '''
     This function perfoms the following tasks:
     1. Loads matches and auctions datasets
@@ -16,12 +16,12 @@ def plot_():
       b) winLossRatio:    shows the win/loss ratio for each team each year
     4. Calculates
     '''
-    matches = pd.read_csv('data/matches.csv')
+    matches = pd.read_csv('../data/matches.csv')
     matches = matches.drop(
         matches.columns[[0, 2, 3, 6, 7, 8, 9, 11, 12, 14, 15, 16, 17]], axis=1)
     matches = matches.rename(columns={"season": "Year", "winner": "Winner",
                                       "player_of_match": "MVP", "team1": "Team1", "team2": "Team2"})
-    theTable = pd.read_csv('data/IPL Player Auction 08-22.csv')
+    theTable = pd.read_csv('../data/IPL Player Auction 08-22.csv')
 
     # For each team, look into auction table and sum all the spending per year and save in a list
     totalBidYr = []
@@ -63,10 +63,8 @@ def plot_():
     winLossPerYear = pd.DataFrame(totalWLMat, columns=years, index=[
                                   matches["Team1"].unique()])
     # save the new dataframes to local folder
-    thePath = os.getcwd() + '/auctionSpending.csv'
-    totalBidPerYear.to_csv(thePath, index=True)
-    thePath = os.getcwd() + '/winLossRatio.csv'
-    winLossPerYear.to_csv(thePath, index=True)
+    totalBidPerYear.to_csv('../data/auctionSpending.csv', index=True)
+    winLossPerYear.to_csv('../data/winLossRatio.csv', index=True)
 
     # Average of the total sum of win/loss ratio for each team per year
     allTeamWLRatioAvg = []
@@ -91,7 +89,7 @@ def plot_():
     plt.ylabel('W/L Ratio')
     plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
     plt.title("W/L Ratio in relation with Money Spent in Auction")
-    plt.savefig('graphs/win_loss ratio vs Speding.png')
+    plt.savefig('../graph/win_loss ratio vs Speding.png')
 
     # plot average of the total spending during auction  vs the win/loss ratio per year
     plt.plot(allTeamBidYear, allTeamWLRatioAvg, 'o')  # spending to win/ratio
@@ -103,4 +101,4 @@ def plot_():
     plt.ylabel('W/L Ratio')
     plt.title(
         "Average W/L Ratio in relation with Money Spent in Auction for All Teams")
-    plt.savefig('graphs/win_loss ratio vs speding average.png')
+    plt.savefig('../graph/win_loss ratio vs speding average.png')
