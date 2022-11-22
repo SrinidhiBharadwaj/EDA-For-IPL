@@ -1,4 +1,4 @@
-n# ECE 143 Project - Group 13 
+# ECE 143 Project - Group 13 
 ## Date of Presentation: 11/23/2022
 
 ## Table of contents
