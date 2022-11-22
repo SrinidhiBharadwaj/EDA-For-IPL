@@ -56,6 +56,13 @@ The third party modules used are as listed below. They are included as [`require
 - BeautifulSoup
 
 ## Implementation
+We used a conda virtual environment with the 3.9.13 python version to work on.
+Make sure you are set up to use Python version - 3.9.13
+
+Install all required libraries -
+```
+pip install -r requirements.txt
+```
 Auction Data Web Scarping -
 ```
 ```
