@@ -4,3 +4,4 @@ seaborn
 jupyter
 requests
 beautifulsoup4
+numpy

@@ -18,7 +18,7 @@
 
 Indian Premier League (IPL) is a cricket tournament, wherein 10 teams play league matches and compete for the final trophy each season. IPL started off in 2008 and the latest edition was in 2022.
 
-We currently have collated data from matches season 2008 to 2017 that we analyze for this project.
+We currently have collated data from matches season 2008 to 2017 from [Kaggle](https://www.kaggle.com/code/ambarish/exploratory-data-analysis-ipl) that we analyze for this project. We also scarped part of auction data from [Wiki](https://en.wikipedia.org/wiki/List_of_2009_Indian_Premier_League_personnel_changes).
 
 ## Repository Structure
 
@@ -28,8 +28,8 @@ The `data/` folder contains:
 
 - [matches.csv](/data/matches.csv) contains all details of matches played in IPL through season 2008 to 2017. [Link to source](https://www.kaggle.com/code/ambarish/exploratory-data-analysis-ipl)
 - [deliveries.csv](/data/deliveries.csv) contains details of every ball delivery through all matches in IPL sean 2008 to 2017. [Link to source](https://www.kaggle.com/code/ambarish/exploratory-data-analysis-ipl)
+- [IPLPlayerAuction.csv](/data/IPLPlayerAuction.csv) contains IPL auction details from 2013 to 2022. [Link to source](https://www.kaggle.com/datasets/kalilurrahman/ipl-player-auction-dataset-from-start-to-now)
 - [IPL Player Auction 08-22.csv](/data/IPL%20Player%20Auction.csv) contains IPL auction details limited to teams, players, years, and winning bid from 2008 to 2022.
-- [IPLPlayerAuction.csv](/data/IPLPlayerAuction.csv) constains IPL auction details from 2013 to 2022. [Link to source](https://www.kaggle.com/datasets/kalilurrahman/ipl-player-auction-dataset-from-start-to-now)
 - [auctionSpending.csv](/data/auctionSpending.csv) contains IPL total auction spending for each team for years 2008 to 2016
 - [winLossRatio.csv](/data/winLossRatio.csv) contains IPL match info regarding win/loss ration for each team from 2008 to 2016
 
@@ -87,8 +87,9 @@ pip install -r requirements.txt
 
 Auction Data Web Scarping -
 
-```
 Run create_auction_data() in wsBids.py
+```
+python -c 'import wsBids; wsBids.create_auction_data()' 
 ```
 
 Source Code for analysis -
@@ -105,4 +106,4 @@ Jupyter Notebook -
 
 ## Presentation
 
-Final Presentation - [Link to Presentation](/Presentation/Presentation.pdf)
+Final Presentation - [Link to Presentation](/Presentation/Final_Presentation.pdf)
