@@ -51,6 +51,8 @@ Data processing files:
 - [batsman_stats.py](src/batsman_stats.py) - Obtains basic batsman stats from the data.
 - [player_performance.py](src/player_performance.py) - Collates player statistics to plot graphs.
 - [bid_VS_performance.py](src/bid_VS_performance.py) - Calculate teams W:L ratio and total auction spending per year and plot their graph.
+- [bowler_stats.py](src/bowler_stats.py) - Extracts bowler statistics for the given bowler
+- [innings.py](src/innings.py) - Extracts information about bowlers given a match and innings
 
 ### Jupyter Notebook
 
