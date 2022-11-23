@@ -20,6 +20,8 @@ Indian Premier League (IPL) is a cricket tournament, wherein 10 teams play leagu
 
 We currently have collated data from matches season 2008 to 2017 from [Kaggle](https://www.kaggle.com/code/ambarish/exploratory-data-analysis-ipl) that we analyze for this project. We also scarped part of auction data from [Wiki](https://en.wikipedia.org/wiki/List_of_2009_Indian_Premier_League_personnel_changes).
 
+Project Proposal - [Link to proposal](Presentation/Proposal.pdf)
+
 ## Repository Structure
 
 ### Datasets
@@ -54,6 +56,9 @@ Data processing files:
 - [bowler_stats.py](src/bowler_stats.py) - Extracts bowler statistics for the given bowler
 - [innings.py](src/innings.py) - Extracts information about bowlers given a match and innings
 - [data_process.py](src/data_process.py) - Helper class to read and process the CSV files
+- [city_toss_winner.py](src/city_toss_winner.py) - Derives relation between the city and toss winning ratios
+- [team_toss_winner.py](src/team_toss_winner.py) - Determines a co relation between team winner Vs toss winner of a match.
+- [tosswiner_choice.py](src/team_toss_winner.py) - Estimates the best inning choice for each team given they win the toss.
 
 ### Jupyter Notebook
 
