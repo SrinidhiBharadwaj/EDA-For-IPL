@@ -112,4 +112,4 @@ Jupyter Notebook -
 
 ## Presentation
 
-Final Presentation - [Link to Presentation](/Presentation/Final_Presentation.pdf)
+Final Presentation - [Link to Presentation](/Presentation/Final_Presentation.pptx)
