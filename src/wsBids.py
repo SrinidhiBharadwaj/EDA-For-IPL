@@ -92,16 +92,19 @@ def combine_tables(theTables):
     theTable.to_csv('../data/IPL Player Auction 08-22.csv', index=False)
 
 
-'''
-these are the used parameters including urls for web scraping
-("https://en.wikipedia.org/wiki/List_of_2008_Indian_Premier_League_auctions_and_personnel_signings", 
-          2, [0, 1, 3, 4, 5], 2008, {"Name": "Player", "Auctioned Price(in US$ thousands)": "Amount"}, 81525)
-("https://en.wikipedia.org/wiki/List_of_2009_Indian_Premier_League_personnel_changes", 
-          7, [0, 4], 2009, {"Winning bid": "Amount"}, 81.53)
-("https://en.wikipedia.org/wiki/List_of_2010_Indian_Premier_League_personnel_changes", 
-          0, [3], 2010, {"Franchise": "Team", "Sold price (USD)": "Amount"}, 81.53)
-("https://en.wikipedia.org/wiki/List_of_2011_Indian_Premier_League_personnel_changes", 
-          2, [0, 4], 2011, {"Winning bid": "Amount"}, 81.53)
-("https://en.wikipedia.org/wiki/List_of_2012_Indian_Premier_League_personnel_changes", 
-          9, [0, 3], 2012, {"Winning bid": "Amount"}, 81.53)
-'''
+def create_auction_data():
+    '''
+    these are the used parameters including urls for web scraping
+    '''
+    table2008 = parse_web("https://en.wikipedia.org/wiki/List_of_2008_Indian_Premier_League_auctions_and_personnel_signings",
+                          2, [0, 1, 3, 4, 5], 2008, {"Name": "Player", "Auctioned Price(in US$ thousands)": "Amount"}, 81525)
+    table2009 = parse_web("https://en.wikipedia.org/wiki/List_of_2009_Indian_Premier_League_personnel_changes",
+                          7, [0, 4], 2009, {"Winning bid": "Amount"}, 81.53)
+    table2010 = parse_web("https://en.wikipedia.org/wiki/List_of_2010_Indian_Premier_League_personnel_changes",
+                          0, [3], 2010, {"Franchise": "Team", "Sold price (USD)": "Amount"}, 81.53)
+    table2011 = parse_web("https://en.wikipedia.org/wiki/List_of_2011_Indian_Premier_League_personnel_changes",
+                          2, [0, 4], 2011, {"Winning bid": "Amount"}, 81.53)
+    table2012 = parse_web("https://en.wikipedia.org/wiki/List_of_2012_Indian_Premier_League_personnel_changes",
+                          9, [0, 3], 2012, {"Winning bid": "Amount"}, 81.53)
+    combine_tables(
+        [table2008, table2009, table2010, table2011, table2012])
