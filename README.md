@@ -53,6 +53,7 @@ Data processing files:
 - [bid_VS_performance.py](src/bid_VS_performance.py) - Calculate teams W:L ratio and total auction spending per year and plot their graph.
 - [bowler_stats.py](src/bowler_stats.py) - Extracts bowler statistics for the given bowler
 - [innings.py](src/innings.py) - Extracts information about bowlers given a match and innings
+- [data_process.py](src/data_process.py) - Helper class to read and process the CSV files
 
 ### Jupyter Notebook
 
