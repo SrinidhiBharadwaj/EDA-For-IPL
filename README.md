@@ -18,7 +18,7 @@
 
 Indian Premier League (IPL) is a cricket tournament, wherein 10 teams play league matches and compete for the final trophy each season. IPL started off in 2008 and the latest edition was in 2022.
 
-We currently have collated data from matches season 2008 to 2017 from [Kaggle](https://www.kaggle.com/code/ambarish/exploratory-data-analysis-ipl) that we analyze for this project. We also scarped part of auction data from [Wiki](https://en.wikipedia.org/wiki/List_of_2009_Indian_Premier_League_personnel_changes).
+We currently have collated data from matches season 2008 to 2017 from [Kaggle](https://www.kaggle.com/code/ambarish/exploratory-data-analysis-ipl/data) that we analyze for this project. We also scarped part of auction data from [Wiki](https://en.wikipedia.org/wiki/List_of_2009_Indian_Premier_League_personnel_changes).
 
 Project Proposal - [Link to proposal](Presentation/Proposal.pdf)
 
